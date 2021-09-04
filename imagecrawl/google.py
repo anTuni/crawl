@@ -20,10 +20,12 @@ for candidate in candidates:
     #검색어 입력 후 enter   
     elem.send_keys(Keys.RETURN)
 
+#맨 아래까지 스크롤(동적으로 생성 되는 이미지)
     SCROLL_PAUSE_TIME = 1
     # Get scroll height
     last_height = driver.execute_script("return document.body.scrollHeight")
     scroll = 0
+    #스크롤 횟수 5번 제한
     while scroll < 5:
         # Scroll down to bottom
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
